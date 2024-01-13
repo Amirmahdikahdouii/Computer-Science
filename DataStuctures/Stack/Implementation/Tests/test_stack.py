@@ -31,7 +31,7 @@ class StackModuleTest(TestCase):
         self.assertEqual(self.empty_stack.peek(), 1)
         
         # Delete Node from stack and test empty stack again
-        self.empty_stack.__del__()
+        self.empty_stack.clean()
         self.assertEqual(len(self.empty_stack), 0)
         self.assertEqual(self.empty_stack.__str__(), "None")
         with self.assertRaises(IndexError):
@@ -46,5 +46,5 @@ class StackModuleTest(TestCase):
         self.assertEqual(len(self.stack), 2)
         
         # Empty the stack
-        self.stack.__del__()
+        self.stack.clean()
         self.assertEqual(len(self.stack), 0)

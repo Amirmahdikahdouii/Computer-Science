@@ -29,6 +29,9 @@ class Stack:
         return self.top.data
 
     def push(self, data):
+        """
+        Create a new node and fill it with given data, and then push it into stack.
+        """
         node = Node(data)
         node.next = self.top
         self.top = node
@@ -62,7 +65,10 @@ class Stack:
         output += "None"
         return output
     
-    def __del__(self):
+    def clean(self):
+        """
+        Empty the stack whenever you call it.
+        """
         while self.top is not None:
             t = self.top
             self.top = t.next
