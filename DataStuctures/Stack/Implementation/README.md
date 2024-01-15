@@ -23,3 +23,24 @@ stack.clean()
 print(stack)
 print(len(stack))
 ```
+
+## C++ Implementation:
+
+There is also a .cpp file in this directory that has implementation of stack using c++. I should note that I'm new to c++ and the code may be not optimize, but it works correctly.
+
+You can add your code in **main()** to test the functionality of program.
+
+**Here is a simple example:**
+
+```c++
+Node* top = nullptr;
+push(top, "Amir");
+push(top, "Ali");
+push(top, "Reza");
+display(top); // Reza -> Ali -> Amir -> null
+cout << peek(top) << endl;
+pop(top);
+display(top); // Ali -> Amir -> null
+clear(top);
+display(top); // null
+```
