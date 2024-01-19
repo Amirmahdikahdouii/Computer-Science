@@ -25,9 +25,9 @@ class LinkList:
                 t = t.next
             t.next = employee
 
-    def delete(self, employee_id: int):
+    def pop(self, employee_id: int):
         """
-        Return Employee object from Link List if it's found otherwise return False.
+        Return Employee object from Link List if it's found otherwise raise ValueError.
         Arg:
             employee_id: Integer that represent Employee ID.
         """
@@ -47,7 +47,7 @@ class LinkList:
                 return node
             temp = node
             node = node.next
-        return False
+        raise ValueError("Employee Doesn't exists")
 
     def __str__(self):
         """
@@ -61,7 +61,7 @@ class LinkList:
         output += "None"
         return output
 
-    def search(self, employee_id: int):
+    def __contains__(self, employee_id: int):
         """
         Search Employee in Link List based on employee ID.
         If Employee with same ID exists return True, and if not, return False.
@@ -124,3 +124,33 @@ class LinkList:
                 # Change the last valid node (temp)
                 temp, node = node, node.next
         return self.first
+
+    def get_employee(self, employee_id: int):
+        """
+        Return Employee object if there is a employee with the given id in list.
+        If Employee doesn't exists, Return None
+        """
+        temp = self.first
+        while temp is not None:
+            if temp.id == employee_id:
+                return temp
+            temp = temp.next
+
+    def __len__(self):
+        i = 0
+        temp = self.first
+        while temp is not None:
+            temp = temp.next
+            i += 1
+        return i
+
+    def __iter__(self):
+        self._node = self.first
+        return self
+
+    def __next__(self):
+        node = self._node
+        while node is not None:
+            self._node = node.next
+            return node
+        raise StopIteration

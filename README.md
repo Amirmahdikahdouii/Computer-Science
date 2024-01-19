@@ -9,4 +9,4 @@ It will be nice if you contribute to this repo and share your experience, So I'm
 - [ ] Write testcases for Queue data structure.
 - [ ] Develop and focus on changing Bubble Sort Algorithm and make it more useful.
 - [ ] Have Implementation of LinkList Data structure with Python.
-- [ ] Write TestCases for Q-1 of Link List Question
+- [ ] Develop solution for Q-1 of Link List Question in C++

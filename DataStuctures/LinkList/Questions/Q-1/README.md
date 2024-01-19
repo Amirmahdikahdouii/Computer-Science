@@ -21,3 +21,13 @@ After getting employees information, You have to create a **Link List** That has
 By Doing this, You haved done your mission!
 
 **Note: It is possible to add more methods and deploy your own mindset and use your imagination to give users best experience, Good Luck!**
+
+## Test Cases:
+
+I have been developed some test cases for this solution.py module that is stored in **Tests/** directory. It is possible to write your test cases for this module or append your test cases into **test_solution.py**. 
+
+In **Tests/** There is a test file named **test_solution.py** That has Test cases for **solution.py** file. You are able to run this test by moving terminal path to Tests/ directory and run command below:
+
+```cmd
+python -m unittest -v test_solution.py
+```
