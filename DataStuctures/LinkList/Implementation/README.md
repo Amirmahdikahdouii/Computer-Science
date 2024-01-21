@@ -13,6 +13,5 @@ Also in this directory, There is a Python file named: **linklist.py** that has i
 You can check this by yourself but I will develop a testcase for this module and append more features to this **LinkList** class for better experience.
 
 ### Todo:
-- [ ] Write Test Cases for **linklist.py**.
 - [ ] Append more features into LinkList Object of **linklist.py**
 - [ ] Develop and change **linklist.cpp**

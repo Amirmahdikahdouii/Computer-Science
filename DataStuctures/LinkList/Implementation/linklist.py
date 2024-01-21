@@ -20,7 +20,7 @@ class LinkList:
             while t.next is not None:
                 t = t.next
             t.next = node
-        return self.head
+        
 
     def pop(self):
         """
@@ -117,6 +117,7 @@ class LinkList:
         temp = self.head
         while temp is not None:
             i += 1
+            temp = temp.next
         return i
 
     def __iter__(self):
